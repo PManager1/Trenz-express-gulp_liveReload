@@ -1,7 +1,19 @@
 extends ../layout/layout
 
 block content
-	h2.center.
-		A one real simple gulp boilerplate that sets up a static server with express that livereloads 
-	h2.center.
-		It also is set up with jade, sass, and coffeescript tasks.
+  .navbar.navbar-inverse.navbar-fixed-top
+    .container
+      .navbar-header
+        a.navbar-brand(href="/") Trenz 3
+          h6 - Get the taste of whats trending on the Web. 
+      //- .navbar-collapse.collapse
+      //-   ul.nav.navbar-nav
+      //-     li
+      //-       a(href="/") Home
+      //-   //- div(ng-include="'/partials/account/navbar-login'")
+
+  section.content
+    div(ng-view)
+
+  footer.container.text-center
+    p © 2014 Multivision
