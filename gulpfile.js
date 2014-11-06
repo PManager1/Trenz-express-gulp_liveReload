@@ -13,21 +13,7 @@ lr = void 0;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-express_port = 4000;
+express_port = 9000;
 express_root = __dirname + '/output/';
 livereload_port = 35729;
 sources = {
@@ -42,8 +28,7 @@ destinations = {
 	css: "output/css"
 };
 gulp.task('serve', function(event) {
-	var app;
-	app = express();
+var	app = express();
 	app.use(livereload());
 	app.use(express["static"](express_root));
 	app.listen(express_port);
@@ -63,8 +48,8 @@ var stylus = require('stylus')
 
 
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+// var routes = require('./routes/index');
+// var users = require('./routes/users');
 var mongoose = require('mongoose'); 
 
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -74,6 +59,9 @@ var config = require('./server/config/config.js')[env];
 require('./server/config/express')(app,config); 
 require('./server/config/mongoose')(config); 
 require('./server/config/routes')(app); 
+
+var ro = require('./server/config/routes')(app); 
+console.log(' ro ', ro);
 
 
 
