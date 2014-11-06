@@ -1,0 +1,20 @@
+extends ../includes/layout
+
+block main-content
+  .navbar.navbar-inverse.navbar-fixed-top
+    .container
+      .navbar-header
+        a.navbar-brand(href="/") Trenz 
+          h6 - Get the taste of whats trending on the Web. 
+      //- .navbar-collapse.collapse
+      //-   ul.nav.navbar-nav
+      //-     li
+      //-       a(href="/") Home
+      //-   //- div(ng-include="'/partials/account/navbar-login'")
+
+  section.content
+    div(ng-view)
+
+  footer.container.text-center
+    p © 2014 Multivision
+                                                            
